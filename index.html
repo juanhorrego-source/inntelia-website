@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>INNTELIA — Agentes de IA para servicio al cliente</title>
+<title>INNTELIA — Agentes de IA para atención al cliente</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 360'%3E%3Cdefs%3E%3CclipPath id='f'%3E%3Ccircle cx='180' cy='180' r='92'/%3E%3C/clipPath%3E%3C/defs%3E%3Ccircle cx='180' cy='180' r='180' fill='%23FBF6EF'/%3E%3Ccircle cx='180' cy='180' r='92' fill='%23283C2F'/%3E%3Cg clip-path='url(%23f)'%3E%3Cpath d='M180 108C226 108 258 140 258 184 258 230 226 262 180 262 134 262 102 230 102 184 102 140 134 108 180 108Z' fill='%234A6354'/%3E%3Cpath d='M126 168Q180 128 234 168L234 150Q180 116 126 150Z' fill='%23283C2F'/%3E%3Ccircle cx='152' cy='186' r='6' fill='%23FBF6EF'/%3E%3Ccircle cx='208' cy='186' r='6' fill='%23FBF6EF'/%3E%3Cpath d='M160 224Q180 238 200 224' stroke='%23D9A441' stroke-width='3.2' fill='none' stroke-linecap='round'/%3E%3C/g%3E%3Cpath d='M88 154A92 92 0 0 1 272 154' fill='none' stroke='%231A2620' stroke-width='11' stroke-linecap='round'/%3E%3Crect x='77' y='146' width='24' height='40' rx='11' fill='%231A2620'/%3E%3Crect x='279' y='146' width='24' height='40' rx='11' fill='%231A2620'/%3E%3Ccircle cx='89' cy='166' r='7.5' fill='%23D9A441'/%3E%3Ccircle cx='291' cy='166' r='7.5' fill='%23D9A441'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -65,11 +66,10 @@
     font-size:1.4rem; font-weight:600;
     color:var(--sage);
   }
-  .logo .dot{
-    width:10px;height:10px;border-radius:50%;
-    background:var(--terracotta);
-    display:inline-block;
+  .logo svg{
+    width:38px; height:38px; flex-shrink:0;
   }
+  .footer-brand .logo svg{width:44px; height:44px;}
   .nav-links{display:flex; gap:36px; align-items:center;}
   .nav-links a{
     font-size:0.95rem; font-weight:600; color:var(--sage);
@@ -377,7 +377,7 @@
 
 <header>
   <nav class="nav">
-    <a href="#" class="logo"><span class="dot"></span>INNTELIA</a>
+    <a href="#" class="logo"><svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="faceClipNav"><circle cx="180" cy="180" r="92"/></clipPath></defs><circle cx="180" cy="180" r="108" fill="none" stroke="#D9A441" stroke-width="1.5" opacity="0.5"/><circle cx="180" cy="180" r="92" fill="#283C2F"/><g clip-path="url(#faceClipNav)"><path d="M180 108 C226 108 258 140 258 184 C258 230 226 262 180 262 C134 262 102 230 102 184 C102 140 134 108 180 108Z" fill="#4A6354"/><path d="M126 168 Q180 128 234 168 L234 150 Q180 116 126 150 Z" fill="#283C2F"/><circle cx="152" cy="186" r="6" fill="#FBF6EF"/><circle cx="208" cy="186" r="6" fill="#FBF6EF"/><path d="M145 184 Q152 177 159 184" stroke="#FBF6EF" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M201 184 Q208 177 215 184" stroke="#FBF6EF" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M160 224 Q180 238 200 224" stroke="#D9A441" stroke-width="3.2" fill="none" stroke-linecap="round"/><line x1="180" y1="198" x2="180" y2="212" stroke="#FBF6EF" stroke-width="1.3" opacity="0.6"/></g><path d="M88 154 A92 92 0 0 1 272 154" fill="none" stroke="#1A2620" stroke-width="11" stroke-linecap="round"/><rect x="77" y="146" width="24" height="40" rx="11" fill="#1A2620"/><rect x="279" y="146" width="24" height="40" rx="11" fill="#1A2620"/><circle cx="89" cy="166" r="7.5" fill="#D9A441"/><circle cx="291" cy="166" r="7.5" fill="#D9A441"/><path d="M279 178 Q301 194 288 220" fill="none" stroke="#1A2620" stroke-width="4.4" stroke-linecap="round"/><circle cx="287" cy="221" r="5" fill="#C9603C"/><path d="M96 300 Q180 270 264 300 L280 350 L80 350 Z" fill="#283C2F"/><path d="M150 300 L180 326 L210 300 Z" fill="#1F2F24"/><rect x="172" y="306" width="16" height="12" rx="2.5" fill="#D9A441"/></svg>INNTELIA</a>
     <div class="nav-links">
       <a href="#servicios">Servicios</a>
       <a href="#casos">Casos de éxito</a>
@@ -472,21 +472,21 @@
 
       <div class="case-feature">
         <div>
-          <span class="eyebrow">Caso destacado</span>
-          <h3>Cómo [Nombre del cliente] dejó de perder citas por falta de respuesta</h3>
-          <p>Implementamos un agente de WhatsApp que atiende, agenda y confirma citas automáticamente, liberando horas de trabajo manual cada semana.</p>
+          <span class="eyebrow">Caso destacado · Seguridad electrónica</span>
+          <h3>TELEVIGIA aumentó sus ventas sustancialmente en 6 meses sin contratar una sola persona más.</h3>
+          <p>TELEVIGIA, empresa de seguridad electrónica y monitoreo 24/7, tenía un problema silencioso: los clientes llegaban por WhatsApp y web preguntando por alarmas y monitoreo — pero las respuestas tardaban horas y hasta días, las cotizaciones se hacían lentamente, y los clientes se enfriaban antes de ser atendidos. INNTELIA implementó agentes que apoyan el servicio al cliente y la atención al usuario, agilizando el proceso de cotización, y haciendo seguimiento automático de todas las comunicaciones.</p>
           <div class="case-stats">
-            <div><div class="num">+40%</div><div class="lbl">citas confirmadas</div></div>
-            <div><div class="num">-70%</div><div class="lbl">tiempo de respuesta</div></div>
-            <div><div class="num">0</div><div class="lbl">mensajes sin atender</div></div>
+            <div><div class="num">×2</div><div class="lbl">ventas en 6 meses</div></div>
+            <div><div class="num">0%</div><div class="lbl">aumento en personal</div></div>
+            <div><div class="num">24/7</div><div class="lbl">atención activa</div></div>
           </div>
         </div>
         <div class="case-quote-card">
           <div class="stars">★★★★★</div>
-          <p class="quote">"Desde que el agente quedó funcionando, no se nos vuelve a escapar un cliente por no responder a tiempo. Se nota en las ventas."</p>
+          <p class="quote">"Antes perdíamos clientes sin darnos cuenta; preguntaban, no les respondíamos rápido y se iban con la competencia. Hoy el agente atiende al instante, indaga acerca de los deseos, necesidades y preferencias del cliente y nos facilita inmensamente el trabajo comercial. Las ventas se duplicaron y el equipo es el mismo."</p>
           <div class="who">
-            <div class="avatar">C</div>
-            <div><div class="name">Cliente INNTELIA</div><div class="role">Negocio de servicios profesionales</div></div>
+            <div class="avatar">T</div>
+            <div><div class="name">Gerente General, TELEVIGIA</div><div class="role">Seguridad electrónica y monitoreo · Colombia</div></div>
           </div>
         </div>
       </div>
@@ -494,13 +494,13 @@
       <div class="mini-cases">
         <div class="mini-case">
           <span class="ribbon">Próximamente</span>
-          <h4>Asistente para clínica dental</h4>
-          <p>Agendamiento automático y recordatorios de citas vía WhatsApp.</p>
+          <h4>Agendamiento para profesionales de salud</h4>
+          <p>Confirmación y recordatorio de citas automático vía WhatsApp, sin llamadas ni personal adicional.</p>
         </div>
         <div class="mini-case">
           <span class="ribbon">Próximamente</span>
-          <h4>Agente de ventas para retail local</h4>
-          <p>Catálogo, precios y seguimiento de pedidos sin intervención manual.</p>
+          <h4>Agente de ventas para comercio local</h4>
+          <p>Catálogo, cotizaciones y seguimiento de pedidos sin intervención manual del equipo.</p>
         </div>
       </div>
     </div>
@@ -557,7 +557,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#" class="logo"><span class="dot"></span>INNTELIA</a>
+        <a href="#" class="logo"><svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="faceClipFooter"><circle cx="180" cy="180" r="92"/></clipPath></defs><circle cx="180" cy="180" r="108" fill="none" stroke="#D9A441" stroke-width="1.5" opacity="0.5"/><circle cx="180" cy="180" r="92" fill="#283C2F"/><g clip-path="url(#faceClipFooter)"><path d="M180 108 C226 108 258 140 258 184 C258 230 226 262 180 262 C134 262 102 230 102 184 C102 140 134 108 180 108Z" fill="#4A6354"/><path d="M126 168 Q180 128 234 168 L234 150 Q180 116 126 150 Z" fill="#283C2F"/><circle cx="152" cy="186" r="6" fill="#FBF6EF"/><circle cx="208" cy="186" r="6" fill="#FBF6EF"/><path d="M145 184 Q152 177 159 184" stroke="#FBF6EF" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M201 184 Q208 177 215 184" stroke="#FBF6EF" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M160 224 Q180 238 200 224" stroke="#D9A441" stroke-width="3.2" fill="none" stroke-linecap="round"/><line x1="180" y1="198" x2="180" y2="212" stroke="#FBF6EF" stroke-width="1.3" opacity="0.6"/></g><path d="M88 154 A92 92 0 0 1 272 154" fill="none" stroke="#1A2620" stroke-width="11" stroke-linecap="round"/><rect x="77" y="146" width="24" height="40" rx="11" fill="#1A2620"/><rect x="279" y="146" width="24" height="40" rx="11" fill="#1A2620"/><circle cx="89" cy="166" r="7.5" fill="#D9A441"/><circle cx="291" cy="166" r="7.5" fill="#D9A441"/><path d="M279 178 Q301 194 288 220" fill="none" stroke="#1A2620" stroke-width="4.4" stroke-linecap="round"/><circle cx="287" cy="221" r="5" fill="#C9603C"/><path d="M96 300 Q180 270 264 300 L280 350 L80 350 Z" fill="#283C2F"/><path d="M150 300 L180 326 L210 300 Z" fill="#1F2F24"/><rect x="172" y="306" width="16" height="12" rx="2.5" fill="#D9A441"/></svg>INNTELIA</a>
         <p>Diseñamos agentes de inteligencia artificial que atienden a tus clientes con la misma dedicación que tú lo harías.</p>
       </div>
       <div>
