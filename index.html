@@ -61,15 +61,14 @@
     max-width:1180px; margin:0 auto;
   }
   .logo{
-    display:flex; align-items:center; gap:10px;
-    font-family:'Fraunces', serif;
-    font-size:1.4rem; font-weight:600;
-    color:var(--sage);
+    display:flex; align-items:center;
+    text-decoration:none;
   }
   .logo svg{
-    width:38px; height:38px; flex-shrink:0;
+    height:44px; width:auto;
   }
-  .footer-brand .logo svg{width:44px; height:44px;}
+  .logo span{ display:none; }
+  .footer-brand .logo svg{ height:50px; width:auto; }
   .nav-links{display:flex; gap:36px; align-items:center;}
   .nav-links a{
     font-size:0.95rem; font-weight:600; color:var(--sage);
@@ -377,7 +376,107 @@
 
 <header>
   <nav class="nav">
-    <a href="#" class="logo"><svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="faceClipNav"><circle cx="180" cy="180" r="92"/></clipPath></defs><circle cx="180" cy="180" r="108" fill="none" stroke="#D9A441" stroke-width="1.5" opacity="0.5"/><circle cx="180" cy="180" r="92" fill="#283C2F"/><g clip-path="url(#faceClipNav)"><path d="M180 108 C226 108 258 140 258 184 C258 230 226 262 180 262 C134 262 102 230 102 184 C102 140 134 108 180 108Z" fill="#4A6354"/><path d="M126 168 Q180 128 234 168 L234 150 Q180 116 126 150 Z" fill="#283C2F"/><circle cx="152" cy="186" r="6" fill="#FBF6EF"/><circle cx="208" cy="186" r="6" fill="#FBF6EF"/><path d="M145 184 Q152 177 159 184" stroke="#FBF6EF" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M201 184 Q208 177 215 184" stroke="#FBF6EF" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M160 224 Q180 238 200 224" stroke="#D9A441" stroke-width="3.2" fill="none" stroke-linecap="round"/><line x1="180" y1="198" x2="180" y2="212" stroke="#FBF6EF" stroke-width="1.3" opacity="0.6"/></g><path d="M88 154 A92 92 0 0 1 272 154" fill="none" stroke="#1A2620" stroke-width="11" stroke-linecap="round"/><rect x="77" y="146" width="24" height="40" rx="11" fill="#1A2620"/><rect x="279" y="146" width="24" height="40" rx="11" fill="#1A2620"/><circle cx="89" cy="166" r="7.5" fill="#D9A441"/><circle cx="291" cy="166" r="7.5" fill="#D9A441"/><path d="M279 178 Q301 194 288 220" fill="none" stroke="#1A2620" stroke-width="4.4" stroke-linecap="round"/><circle cx="287" cy="221" r="5" fill="#C9603C"/><path d="M96 300 Q180 270 264 300 L280 350 L80 350 Z" fill="#283C2F"/><path d="M150 300 L180 326 L210 300 Z" fill="#1F2F24"/><rect x="172" y="306" width="16" height="12" rx="2.5" fill="#D9A441"/></svg>INNTELIA</a>
+    <a href="#" class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="28 18 760 136" width="760" height="136">
+  <defs>
+    <linearGradient id="gold3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#FFF5B0"/>
+      <stop offset="12%"  stop-color="#F0C84A"/>
+      <stop offset="38%"  stop-color="#D9A441"/>
+      <stop offset="55%"  stop-color="#F5D060"/>
+      <stop offset="75%"  stop-color="#B8841E"/>
+      <stop offset="90%"  stop-color="#D9A441"/>
+      <stop offset="100%" stop-color="#6A4808"/>
+    </linearGradient>
+    <linearGradient id="goldShadow3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#7A5510"/>
+      <stop offset="100%" stop-color="#2A1800"/>
+    </linearGradient>
+    <linearGradient id="goldShine3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#FFFCE0"/>
+      <stop offset="100%" stop-color="#D9A441"/>
+    </linearGradient>
+    <!-- Filtro para redondear esquinas de cada letra -->
+    <filter id="round" x="-5%" y="-5%" width="110%" height="110%">
+      <feMorphology operator="erode"  radius="4" result="eroded"/>
+      <feMorphology operator="dilate" radius="4" in="eroded"/>
+    </filter>
+    <filter id="bevel" x="-2%" y="-2%" width="104%" height="104%">
+      <feMorphology operator="erode"  radius="3" result="eroded"/>
+      <feMorphology operator="dilate" radius="3" in="eroded"/>
+    </filter>
+  </defs>
+
+  <!-- Fondo verde salvia oscuro -->
+  
+  
+
+  <!-- ═══════════════════════════════════════════════
+       Letras: y_top=22, y_bot=148, height=126u
+       Esquinas redondeadas via filter="url(#round)"
+       Bisel: capa oscura +4px abajo/derecha
+  ═══════════════════════════════════════════════ -->
+
+  <!-- ══ I ══  ancho: 38u, x: 28-66 -->
+  <g filter="url(#round)">
+    <rect x="32" y="22" width="38" height="126" fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <rect x="32" y="22" width="38" height="126" fill="url(#gold3)"/>
+  </g>
+
+  <!-- ══ N ══  ancho: 100u, x: 76-176 -->
+  <g filter="url(#round)">
+    <!-- sombra completa -->
+    <polygon points="76,148 106,148 176,46 176,22 146,22 76,124" fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <polygon points="76,22  106,22  106,148 76,148"               fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <polygon points="146,22 176,22  176,148 146,148"              fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <!-- dorado -->
+    <polygon points="76,148 106,148 176,46 176,22 146,22 76,124" fill="url(#gold3)"/>
+    <polygon points="76,22  106,22  106,148 76,148"               fill="url(#gold3)"/>
+    <polygon points="146,22 176,22  176,148 146,148"              fill="url(#gold3)"/>
+  </g>
+
+  <!-- ══ N ══  ancho: 100u, x: 186-286 -->
+  <g filter="url(#round)">
+    <polygon points="186,148 216,148 286,46 286,22 256,22 186,124" fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <polygon points="186,22  216,22  216,148 186,148"               fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <polygon points="256,22  286,22  286,148 256,148"               fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <polygon points="186,148 216,148 286,46 286,22 256,22 186,124" fill="url(#gold3)"/>
+    <polygon points="186,22  216,22  216,148 186,148"               fill="url(#gold3)"/>
+    <polygon points="256,22  286,22  286,148 256,148"               fill="url(#gold3)"/>
+  </g>
+
+  <!-- ══ T ══  ancho: 110u, x: 296-406 -->
+  <g filter="url(#round)">
+    <polygon points="296,22 406,22 406,52 366,52 366,148 336,148 336,52 296,52" fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <polygon points="296,22 406,22 406,52 366,52 366,148 336,148 336,52 296,52" fill="url(#gold3)"/>
+  </g>
+
+  <!-- ══ E ══  ancho: 96u, x: 416-512 -->
+  <g filter="url(#round)">
+    <polygon points="416,22 512,22 512,52 446,52 446,70 502,70 502,100 446,100 446,118 512,118 512,148 416,148" fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <polygon points="416,22 512,22 512,52 446,52 446,70 502,70 502,100 446,100 446,118 512,118 512,148 416,148" fill="url(#gold3)"/>
+  </g>
+
+  <!-- ══ L ══  ancho: 86u, x: 522-608 -->
+  <g filter="url(#round)">
+    <polygon points="522,22 552,22 552,118 608,118 608,148 522,148" fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <polygon points="522,22 552,22 552,118 608,118 608,148 522,148" fill="url(#gold3)"/>
+  </g>
+
+  <!-- ══ I ══  ancho: 38u, x: 618-656 -->
+  <g filter="url(#round)">
+    <rect x="622" y="22" width="38" height="126" fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <rect x="622" y="22" width="38" height="126" fill="url(#gold3)"/>
+  </g>
+
+  <!-- ══ A ══  V invertida sin barra, ancho: 110u, x: 666-776 -->
+  <g filter="url(#round)">
+    <!-- sombra: dos piernas que se unen en punta arriba -->
+    <polygon points="666,148 700,148 721,60 742,148 776,148 737,22 705,22" fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <!-- dorado -->
+    <polygon points="666,148 700,148 721,60 742,148 776,148 737,22 705,22" fill="url(#gold3)"/>
+  </g>
+
+</svg><span>INNTELIA</span></a>
     <div class="nav-links">
       <a href="#servicios">Servicios</a>
       <a href="#casos">Casos de éxito</a>
@@ -557,7 +656,107 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#" class="logo"><svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="faceClipFooter"><circle cx="180" cy="180" r="92"/></clipPath></defs><circle cx="180" cy="180" r="108" fill="none" stroke="#D9A441" stroke-width="1.5" opacity="0.5"/><circle cx="180" cy="180" r="92" fill="#283C2F"/><g clip-path="url(#faceClipFooter)"><path d="M180 108 C226 108 258 140 258 184 C258 230 226 262 180 262 C134 262 102 230 102 184 C102 140 134 108 180 108Z" fill="#4A6354"/><path d="M126 168 Q180 128 234 168 L234 150 Q180 116 126 150 Z" fill="#283C2F"/><circle cx="152" cy="186" r="6" fill="#FBF6EF"/><circle cx="208" cy="186" r="6" fill="#FBF6EF"/><path d="M145 184 Q152 177 159 184" stroke="#FBF6EF" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M201 184 Q208 177 215 184" stroke="#FBF6EF" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M160 224 Q180 238 200 224" stroke="#D9A441" stroke-width="3.2" fill="none" stroke-linecap="round"/><line x1="180" y1="198" x2="180" y2="212" stroke="#FBF6EF" stroke-width="1.3" opacity="0.6"/></g><path d="M88 154 A92 92 0 0 1 272 154" fill="none" stroke="#1A2620" stroke-width="11" stroke-linecap="round"/><rect x="77" y="146" width="24" height="40" rx="11" fill="#1A2620"/><rect x="279" y="146" width="24" height="40" rx="11" fill="#1A2620"/><circle cx="89" cy="166" r="7.5" fill="#D9A441"/><circle cx="291" cy="166" r="7.5" fill="#D9A441"/><path d="M279 178 Q301 194 288 220" fill="none" stroke="#1A2620" stroke-width="4.4" stroke-linecap="round"/><circle cx="287" cy="221" r="5" fill="#C9603C"/><path d="M96 300 Q180 270 264 300 L280 350 L80 350 Z" fill="#283C2F"/><path d="M150 300 L180 326 L210 300 Z" fill="#1F2F24"/><rect x="172" y="306" width="16" height="12" rx="2.5" fill="#D9A441"/></svg>INNTELIA</a>
+        <a href="#" class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="28 18 760 136" width="760" height="136">
+  <defs>
+    <linearGradient id="gold3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#FFF5B0"/>
+      <stop offset="12%"  stop-color="#F0C84A"/>
+      <stop offset="38%"  stop-color="#D9A441"/>
+      <stop offset="55%"  stop-color="#F5D060"/>
+      <stop offset="75%"  stop-color="#B8841E"/>
+      <stop offset="90%"  stop-color="#D9A441"/>
+      <stop offset="100%" stop-color="#6A4808"/>
+    </linearGradient>
+    <linearGradient id="goldShadow3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#7A5510"/>
+      <stop offset="100%" stop-color="#2A1800"/>
+    </linearGradient>
+    <linearGradient id="goldShine3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#FFFCE0"/>
+      <stop offset="100%" stop-color="#D9A441"/>
+    </linearGradient>
+    <!-- Filtro para redondear esquinas de cada letra -->
+    <filter id="round" x="-5%" y="-5%" width="110%" height="110%">
+      <feMorphology operator="erode"  radius="4" result="eroded"/>
+      <feMorphology operator="dilate" radius="4" in="eroded"/>
+    </filter>
+    <filter id="bevel" x="-2%" y="-2%" width="104%" height="104%">
+      <feMorphology operator="erode"  radius="3" result="eroded"/>
+      <feMorphology operator="dilate" radius="3" in="eroded"/>
+    </filter>
+  </defs>
+
+  <!-- Fondo verde salvia oscuro -->
+  
+  
+
+  <!-- ═══════════════════════════════════════════════
+       Letras: y_top=22, y_bot=148, height=126u
+       Esquinas redondeadas via filter="url(#round)"
+       Bisel: capa oscura +4px abajo/derecha
+  ═══════════════════════════════════════════════ -->
+
+  <!-- ══ I ══  ancho: 38u, x: 28-66 -->
+  <g filter="url(#round)">
+    <rect x="32" y="22" width="38" height="126" fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <rect x="32" y="22" width="38" height="126" fill="url(#gold3)"/>
+  </g>
+
+  <!-- ══ N ══  ancho: 100u, x: 76-176 -->
+  <g filter="url(#round)">
+    <!-- sombra completa -->
+    <polygon points="76,148 106,148 176,46 176,22 146,22 76,124" fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <polygon points="76,22  106,22  106,148 76,148"               fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <polygon points="146,22 176,22  176,148 146,148"              fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <!-- dorado -->
+    <polygon points="76,148 106,148 176,46 176,22 146,22 76,124" fill="url(#gold3)"/>
+    <polygon points="76,22  106,22  106,148 76,148"               fill="url(#gold3)"/>
+    <polygon points="146,22 176,22  176,148 146,148"              fill="url(#gold3)"/>
+  </g>
+
+  <!-- ══ N ══  ancho: 100u, x: 186-286 -->
+  <g filter="url(#round)">
+    <polygon points="186,148 216,148 286,46 286,22 256,22 186,124" fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <polygon points="186,22  216,22  216,148 186,148"               fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <polygon points="256,22  286,22  286,148 256,148"               fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <polygon points="186,148 216,148 286,46 286,22 256,22 186,124" fill="url(#gold3)"/>
+    <polygon points="186,22  216,22  216,148 186,148"               fill="url(#gold3)"/>
+    <polygon points="256,22  286,22  286,148 256,148"               fill="url(#gold3)"/>
+  </g>
+
+  <!-- ══ T ══  ancho: 110u, x: 296-406 -->
+  <g filter="url(#round)">
+    <polygon points="296,22 406,22 406,52 366,52 366,148 336,148 336,52 296,52" fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <polygon points="296,22 406,22 406,52 366,52 366,148 336,148 336,52 296,52" fill="url(#gold3)"/>
+  </g>
+
+  <!-- ══ E ══  ancho: 96u, x: 416-512 -->
+  <g filter="url(#round)">
+    <polygon points="416,22 512,22 512,52 446,52 446,70 502,70 502,100 446,100 446,118 512,118 512,148 416,148" fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <polygon points="416,22 512,22 512,52 446,52 446,70 502,70 502,100 446,100 446,118 512,118 512,148 416,148" fill="url(#gold3)"/>
+  </g>
+
+  <!-- ══ L ══  ancho: 86u, x: 522-608 -->
+  <g filter="url(#round)">
+    <polygon points="522,22 552,22 552,118 608,118 608,148 522,148" fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <polygon points="522,22 552,22 552,118 608,118 608,148 522,148" fill="url(#gold3)"/>
+  </g>
+
+  <!-- ══ I ══  ancho: 38u, x: 618-656 -->
+  <g filter="url(#round)">
+    <rect x="622" y="22" width="38" height="126" fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <rect x="622" y="22" width="38" height="126" fill="url(#gold3)"/>
+  </g>
+
+  <!-- ══ A ══  V invertida sin barra, ancho: 110u, x: 666-776 -->
+  <g filter="url(#round)">
+    <!-- sombra: dos piernas que se unen en punta arriba -->
+    <polygon points="666,148 700,148 721,60 742,148 776,148 737,22 705,22" fill="url(#goldShadow3)" transform="translate(4,4)"/>
+    <!-- dorado -->
+    <polygon points="666,148 700,148 721,60 742,148 776,148 737,22 705,22" fill="url(#gold3)"/>
+  </g>
+
+</svg><span>INNTELIA</span></a>
         <p>Diseñamos agentes de inteligencia artificial que atienden a tus clientes con la misma dedicación que tú lo harías.</p>
       </div>
       <div>
